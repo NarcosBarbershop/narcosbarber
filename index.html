@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Narcos Barbershop</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #eee;
+    line-height: 1.6;
+  }
+  a {
+    color: #f4c842;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #ddb72c;
+  }
+  header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: #f4c842;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  header video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.4);
+  }
+  header h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    margin-bottom: 0.2em;
+    text-shadow: 0 0 10px #f4c842;
+  }
+  header p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1em;
+    text-shadow: 0 0 8px #ddb72c;
+  }
+  header .btn-book {
+    background: #f4c842;
+    color: #121212;
+    padding: 15px 35px;
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px #f4c842;
+    transition: background 0.3s ease;
+  }
+  header .btn-book:hover {
+    background: #ddb72c;
+  }
+
+  nav {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #f4c842;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+  }
+  section {
+    margin-bottom: 60px;
+  }
+  h2 {
+    color: #f4c842;
+    border-bottom: 3px solid #f4c842;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+
+  /* Τιμοκατάλογος */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #f4c842aa;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+  th {
+    background: #333;
+    font-weight: 700;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #f4c842aa;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Κουμπί WhatsApp */
+  .btn-whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px #25d366aa;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+  .btn-whatsapp:hover {
+    background: #1ebe5a;
+  }
+
+  /* Επικοινωνία */
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 280px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #f4c842aa;
+    margin-top: 15px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.8rem;
+    }
+    header p {
+      font-size: 1.1rem;
+    }
+    nav {
+      gap: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#services">Υπηρεσίες</a>
+  <a href="#gallery">Φωτογραφίες</a>
+  <a href="#booking">Κρατήσεις</a>
+  <a href="#contact">Επικοινωνία</a>
+</nav>
+
+<header>
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.pixabay.com/vimeo/358523482/Barber-34808.mp4" type="video/mp4" />
+    <!-- fallback image -->
+  </video>
+  <h1>Narcos Barbershop</h1>
+  <p>Your Style, Our Passion</p>
+  <button class="btn-book" onclick="window.open('https://wa.me/30XXXXXXXXX', '_blank')">Κλείσε Ραντεβού</button>
+</header>
+
+<main>
+
+  <section id="services">
+    <h2>Τιμοκατάλογος Υπηρεσιών</h2>
+    <table>
+      <thead>
+        <tr><th>Υπηρεσία</th><th>Τιμή (€)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Κούρεμα</td><td>15</td></tr>
+        <tr><td>Ξύρισμα</td><td>10</td></tr>
+        <tr><td>Κούρεμα + Ξύρισμα</td><td>20</td></tr>
+        <tr><td>Περιποίηση Γενιών</td><td>8</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="gallery">
+    <h2>Φωτογραφική Γκαλερί</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" alt="Κούρεμα 1">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Κούρεμα 2">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80" alt="Ξύρισμα">
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Γένια">
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Κλείσε Ραντεβού</h2>
+    <a href="https://wa.me/30XXXXXXXXX" target="_blank" rel="noopener" class="btn-whatsapp">Κλείσε Ραντεβού μέσω WhatsApp</a>
+  </section>
+
+  <section id="contact">
+    <h2>Επικοινωνία</h2>
+    <div class="contact-info">
+      <p>Τηλέφωνο: <a href="tel:+302101234567">+30 210 1234567</a></p>
+      <p>Instagram: <a href="https://instagram.com/narcosbarbershop" target="_blank" rel="noopener">@narcosbarbershop</a></p>
+      <p>Διεύθυνση: Οδός Παράδειγμα 123, Αθήνα</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.1234567890123!2d23.72753841522964!3d37.98381097972357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd230d9f9bcf%3A0x2b23f12b0d8e4e8a!2sAthens%2C%20Greece!5e0!3m2!1sel!2sus!4v1651234567890"
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
