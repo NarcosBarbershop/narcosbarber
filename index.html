@@ -9,7 +9,69 @@
   * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
+  body
+  {/* Βασικό στυλ για desktop */
+body {
+  background-image: url('background-image-url.jpg');
+  background-size: cover;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Flexbox Layout για οριζόντιες οθόνες */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Media Query για οθόνες μέχρι 768px */
+@media (max-width: 768px) {
   body {
+    background-image: url('background-image-url-mobile.jpg'); /* Μικρότερη εικόνα για κινητά */
+  }
+
+  /* Κείμενο */
+  h1 {
+    font-size: 24px; /* Μικρότερο μέγεθος τίτλων */
+  }
+
+  p {
+    font-size: 16px; /* Μικρότερο κείμενο */
+  }
+
+  /* Μενού κάθετο (vertical) */
+  .menu {
+    display: block;
+    font-size: 14px;
+  }
+
+  /* Εικόνες προσαρμοσμένες για κινητά */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Στηλοθεσία σε Grid Layout για μικρές οθόνες */
+  .container {
+    flex-direction: column; /* Μετατρέπουμε τις στήλες σε γραμμές για κινητά */
+  }
+}
+
+/* Media Query για οθόνες μέχρι 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px; /* Ακόμα μικρότερο μέγεθος τίτλων */
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .menu {
+    font-size: 12px;
+  }
+}
+
   background-image: url('https://images.unsplash.com/photo-1610669627276-851ef9bca343?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover; /* Καλύπτει όλη την οθόνη */
   background-position: center; /* Κεντράρει την εικόνα */
