@@ -12,6 +12,30 @@
     margin: 0; padding: 0; box-sizing: border-box;
   }
   body
+  body {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1610669627276-851ef9bca343?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: white;
+}
+
+/* Overlay πάνω από την εικόνα */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ημιδιαφανές μαύρο overlay */
+  z-index: -1; /* Τοποθετούμε το overlay πίσω από το περιεχόμενο */
+}
+
   /* Βασικό στυλ για το background και οθόνες υπολογιστή */
 body {
   background-image: url('https://images.unsplash.com/photo-1610669627276-851ef9bca343?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -26,7 +50,7 @@ body {
 }
 
 /* Media Query για μικρότερες οθόνες (π.χ., κινητά και ταμπλέτες) */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   body {
     background-image: url('https://images.unsplash.com/photo-1610669627276-851ef9bca343?q=80&w=768&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Μικρότερη εικόνα για κινητά */
     background-size: cover; /* Εξασφαλίζουμε ότι καλύπτει όλη την οθόνη */
